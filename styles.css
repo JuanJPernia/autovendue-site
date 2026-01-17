@@ -1,0 +1,220 @@
+:root {
+  --primary: #c9653a;
+  --primary-foreground: #fff;
+  --background: #f7f2eb;
+  --foreground: #40372d;
+  --card: #fff;
+  --accent: #d4c18e;
+  --border: rgba(0,0,0,0.1);
+  --radius: 16px;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: var(--font-display);
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 { font-size: 1.8rem; }
+
+header .nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+header .nav a:hover { color: var(--primary); }
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero-car.png') center/cover no-repeat;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-content h1 { font-size: 2.5rem; margin: 1rem 0; }
+
+.hero-buttons {
+  margin-top: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary { background: var(--primary); color: var(--primary-foreground); }
+.btn-secondary { background: var(--accent); color: var(--foreground); }
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* QUICK SEARCH */
+.quick-search {
+  padding: 2rem;
+  background: var(--card);
+  margin: 2rem;
+  border-radius: var(--radius);
+}
+
+.quick-search h2 { text-align: center; margin-bottom: 1rem; }
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.search-grid input, .search-grid select, .search-grid button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* INVENTORY */
+.inventory {
+  padding: 2rem;
+  text-align: center;
+}
+
+.inventory-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inventory-grid div {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  min-width: 150px;
+}
+
+.filter-btn {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  transform: scale(1.05);
+}
+
+/* CONTACT FORM */
+.contact {
+  padding: 2rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.contact h2 { text-align: center; margin-bottom: 1rem; }
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.contact button {
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  width: 100%;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  background: var(--card);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .form-row { flex-direction: column; }
+  .inventory-grid { flex-direction: column; align-items: center; }
+}
