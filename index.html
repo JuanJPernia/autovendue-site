@@ -1,234 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Vendue - Venta de Autos</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoVendue | Vende tu auto fácil</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>Auto Vendue</h1>
-    <nav class="nav">
-      <a href="#inventory">Inventario</a>
-      <a href="#contact">Contacto</a>
-    </nav>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">AutoVendue</div>
+      <nav>
+        <a href="#features">Beneficios</a>
+        <a href="#cta">Publicar</a>
+      </nav>
+    </div>
   </header>
 
-  <header class="navbar">
-  <div class="navbar-container">
-    <div class="logo">AutoVendue</div>
-
-    <nav class="nav-links">
-      <a href="#features">Beneficios</a>
-      <a href="#">Cómo funciona</a>
-      <a href="#">Contacto</a>
-    </nav>
-
-    <a href="#" class="nav-cta">Publicar auto</a>
-  </div>
-</header>
-
+  <!-- HERO -->
   <section class="hero">
-  <div class="hero-container">
-    <h1>
-      Vende tu auto <span>rápido</span> y sin complicaciones
-    </h1>
-
-    <p>
-      AutoVendue conecta vendedores y compradores de vehículos de forma
-      segura, transparente y 100% digital.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#" class="btn btn-primary">Publicar mi auto</a>
-      <a href="#" class="btn btn-secondary">Ver autos</a>
+    <div class="container hero-content">
+      <h1>Vende tu auto <span>rápido</span> y sin complicaciones</h1>
+      <p>Conectamos vendedores y compradores de vehículos de forma segura y digital.</p>
+      <a href="#cta" class="btn-primary">Publicar mi auto</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="features">
-  <div class="features-container">
-    <h2>¿Por qué usar AutoVendue?</h2>
-    <p class="features-subtitle">
-      Simplificamos la venta y compra de vehículos con tecnología y confianza.
-    </p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🚗</div>
-        <h3>Publicación rápida</h3>
-        <p>Publica tu auto en minutos y llega a compradores reales.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3>Proceso seguro</h3>
-        <p>Protegemos cada paso de la transacción para ambas partes.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Gestión digital</h3>
-        <p>Todo el proceso se realiza en línea, sin papeleos.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">📈</div>
-        <h3>Mejor visibilidad</h3>
-        <p>Tu anuncio se muestra a compradores interesados.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p>Bienvenido a Auto Vendue</p>
-      <h1>Encuentra tu Auto Perfecto</h1>
-      <p>Tu fuente número uno para comprar vehículos usados de calidad. Ofrecemos una amplia gama de opciones de financiamiento.</p>
-      <div class="hero-buttons">
-        <button id="btnInventory" class="btn-primary">Ver Inventario</button>
-        <button id="btnContact" class="btn-secondary">Contáctanos</button>
+  <!-- FEATURES -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>¿Por qué AutoVendue?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🚗 Publicación rápida</h3>
+          <p>Tu anuncio en línea en minutos.</p>
+        </div>
+        <div class="card">
+          <h3>🔒 Proceso seguro</h3>
+          <p>Transacciones protegidas.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ 100% digital</h3>
+          <p>Sin papeleos ni llamadas.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- QUICK SEARCH -->
-  <section class="quick-search">
-    <h2>Búsqueda Rápida</h2>
-    <div class="search-grid">
-      <div>
-        <label for="make">Marca</label>
-        <select id="make">
-          <option value="">Seleccionar</option>
-          <option value="ACURA">ACURA</option>
-          <option value="FORD">FORD</option>
-          <option value="GMC">GMC</option>
-          <option value="HONDA">HONDA</option>
-          <option value="INFINITI">INFINITI</option>
-          <option value="JEEP">JEEP</option>
-          <option value="TOYOTA">TOYOTA</option>
-        </select>
-      </div>
-      <div>
-        <label for="model">Modelo</label>
-        <select id="model">
-          <option value="">Seleccionar</option>
-          <option value="model1">Modelo 1</option>
-          <option value="model2">Modelo 2</option>
-        </select>
-      </div>
-      <div>
-        <label for="minPrice">Precio Mínimo</label>
-        <input type="number" id="minPrice" placeholder="$0">
-      </div>
-      <div>
-        <label for="maxPrice">Precio Máximo</label>
-        <input type="number" id="maxPrice" placeholder="$50,000">
-      </div>
-      <div>
-        <button id="btnSearch" class="btn-primary">Buscar</button>
-      </div>
+  <!-- CTA -->
+  <section id="cta" class="cta">
+    <div class="container">
+      <h2>Empieza hoy mismo</h2>
+      <p>Publica tu vehículo y conecta con compradores reales.</p>
+      <a href="#" class="btn-dark">Publicar ahora</a>
     </div>
   </section>
 
-  <!-- INVENTORY SECTION -->
-  <section id="inventory" class="inventory">
-    <h2>Compra por Categoría</h2>
-    <div class="inventory-grid">
-      <div>
-        <h3>Por Precio</h3>
-        <button class="filter-btn" data-value="5000">Menos de $5,000</button>
-        <button class="filter-btn" data-value="10000">Menos de $10,000</button>
-        <button class="filter-btn" data-value="15000">Menos de $15,000</button>
-        <button class="filter-btn" data-value="20000">Menos de $20,000</button>
-        <button class="filter-btn" data-value="all">Todos los Autos</button>
-      </div>
-      <div>
-        <h3>Por Tipo</h3>
-        <button class="filter-btn" data-value="COUPE">COUPE</button>
-        <button class="filter-btn" data-value="PICKUP">PICKUP</button>
-        <button class="filter-btn" data-value="SEDAN">SEDAN</button>
-        <button class="filter-btn" data-value="SUV">SUV</button>
-      </div>
-      <div>
-        <h3>Por Marca</h3>
-        <button class="filter-btn" data-value="ACURA">ACURA</button>
-        <button class="filter-btn" data-value="FORD">FORD</button>
-        <button class="filter-btn" data-value="GMC">GMC</button>
-        <button class="filter-btn" data-value="HONDA">HONDA</button>
-        <button class="filter-btn" data-value="INFINITI">INFINITI</button>
-        <button class="filter-btn" data-value="JEEP">JEEP</button>
-        <button class="filter-btn" data-value="TOYOTA">TOYOTA</button>
-      </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 AutoVendue. Todos los derechos reservados.</p>
     </div>
-  </section>
-
-  <!-- CONTACT FORM -->
-  <section id="contact" class="contact">
-    <h2>Contáctanos</h2>
-    <form id="contactForm">
-      <div class="form-row">
-        <input type="text" id="firstName" placeholder="Nombre" required>
-        <input type="text" id="lastName" placeholder="Apellido" required>
-      </div>
-      <div class="form-row">
-        <input type="tel" id="phone" placeholder="Teléfono" required>
-        <input type="email" id="email" placeholder="Email" required>
-      </div>
-      <div>
-        <textarea id="message" placeholder="¿En qué podemos ayudarte?" required></textarea>
-      </div>
-      <div class="form-row">
-        <input type="checkbox" id="terms" required>
-        <label for="terms">Acepto la política de privacidad</label>
-      </div>
-      <button type="submit" class="btn-primary">Enviar Mensaje</button>
-    </form>
-  </section>
-
-<section class="cta">
-  <div class="cta-container">
-    <h2>¿Listo para vender tu auto hoy?</h2>
-    <p>
-      Únete a AutoVendue y conecta con compradores reales en minutos.
-    </p>
-    <a href="#" class="cta-button">Publicar mi auto ahora</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-brand">
-      <h3>AutoVendue</h3>
-      <p>La forma moderna de vender y comprar vehículos.</p>
-    </div>
-
-    <div class="footer-links">
-      <a href="#">Inicio</a>
-      <a href="#features">Beneficios</a>
-      <a href="#">Contacto</a>
-      <a href="#">Términos</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 AutoVendue. Todos los derechos reservados.
-  </div>
-</footer>
-
-
-  <footer>
-    <p>&copy; 2026 Auto Vendue</p>
   </footer>
+<script src="script.js"></script>
 
-  <script src="script.js"></script>
+
 </body>
 </html>
