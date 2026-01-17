@@ -31,3 +31,15 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   alert("¡Mensaje enviado exitosamente!");
   this.reset();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero-container");
+  hero.style.opacity = "0";
+  hero.style.transform = "translateY(20px)";
+
+  setTimeout(() => {
+    hero.style.transition = "all 0.8s ease";
+    hero.style.opacity = "1";
+    hero.style.transform = "translateY(0)";
+  }, 100);
+});
