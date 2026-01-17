@@ -53,6 +53,7 @@ header .nav a:hover { color: var(--primary); }
   text-align: center;
   overflow: hidden;
   padding: 2rem;
+  padding-top: 120px;
 }
 
 .hero-bg {
@@ -341,4 +342,57 @@ footer {
 .feature-card p {
   color: #cbd5f5;
   font-size: 1rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e293b;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.nav-cta {
+  padding: 10px 18px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-cta:hover {
+  background: #0ea5e9;
 }

@@ -56,3 +56,12 @@ cards.forEach((card, index) => {
     card.style.transform = "translateY(0)";
   }, index * 150);
 });
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.style.background = "rgba(2, 6, 23, 0.95)";
+  } else {
+    navbar.style.background = "rgba(2, 6, 23, 0.85)";
+  }
+});
