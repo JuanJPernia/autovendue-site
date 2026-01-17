@@ -65,3 +65,19 @@ window.addEventListener("scroll", () => {
     navbar.style.background = "rgba(2, 6, 23, 0.85)";
   }
 });
+
+const cta = document.querySelector(".cta");
+
+cta.style.opacity = "0";
+cta.style.transform = "translateY(20px)";
+
+window.addEventListener("scroll", () => {
+  const ctaTop = cta.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (ctaTop < windowHeight - 100) {
+    cta.style.transition = "all 0.8s ease";
+    cta.style.opacity = "1";
+    cta.style.transform = "translateY(0)";
+  }
+});
